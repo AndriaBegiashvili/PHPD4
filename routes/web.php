@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('secure') -> get('/', function () {
+Route::get('/', function () {
     return "home page";
 });
 Route:: get('/error', function () {
