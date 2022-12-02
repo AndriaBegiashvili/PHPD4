@@ -17,7 +17,7 @@ class checkNameMiddleware
     public function handle(Request $request, Closure $next)
     {   
         if ($request-> input("name") !== 'my-super-middleware'){
-            return redirect('/');
+            return redirect('/error');
         }
         return $next($request);
     }

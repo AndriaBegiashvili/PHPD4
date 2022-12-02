@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::middleware('secure') -> get('/', function () {
     return "home page";
+});
+Route:: get('/error', function () {
+    return "u dont have token";
 });
 
 
